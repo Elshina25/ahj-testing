@@ -1,0 +1,44 @@
+.container {
+    width: 60%;
+    padding: 50px;
+    margin: auto;
+}
+
+.card-types {
+    width: 80%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.card {
+    width: 24px;
+    height: 24px;
+}
+
+.visa {
+    background-image: url(/src/img/free-icon-visa-196578.png);
+}
+
+.mastercard {
+    background-image: url(/src/img/icons8-логотип-mastercard-24.png);
+}
+
+.american-express {
+    background-image: url(/src/img/free-icon-american-express-349259.png);
+}
+
+.union-pay {
+    background-image: url(/src/img/icons8-unionpay-24.png);
+}
+
+.jcb {
+    background-image: url(/src/img/free-icon-jcb-5968341.png);
+}
+
+.mir {
+    background-image: url(/src/img/icons8-мир-24.png);
+}
