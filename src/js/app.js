@@ -1,5 +1,7 @@
-import CardValidator from "./card-validator/CardValidator";
+import CardValidator from "./cardValidator/CardValidator";
 
-const container = document.querySelector('.container');
-const validator = new CardValidator(container);
-validator.bindedToDOM()
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".container");
+  const validator = new CardValidator(container);
+  validator.bindedToDOM();
+});

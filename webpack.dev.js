@@ -7,9 +7,9 @@ module.exports = merge(common, {
   mode: 'development',
   // Control how source maps are generated
   devtool: 'inline-source-map',
-
   // Spin up a server for quick development
   devServer: {
+    port: 8080,
     historyApiFallback: true,
     open: true,
     compress: true
