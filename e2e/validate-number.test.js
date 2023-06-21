@@ -3,14 +3,25 @@
  */
 
 import puppeteer from "puppeteer";
+import { fork } from "child_process";
 
 jest.setTimeout(30000);
 
 describe("validate is number of credit card or not", () => {
   let browser = null;
   let page = null;
+  let server = null;
 
   beforeEach(async () => {
+    server = fork("./e2e.server.js");
+    await new Promise((resolve, reject) => {
+      server.on("error", reject);
+      server.on("message", (message) => {
+        if (message === "ok") {
+          resolve();
+        }
+      });
+    });
     browser = await puppeteer.launch({
       //   headless: false,
       //   devtools: false,
