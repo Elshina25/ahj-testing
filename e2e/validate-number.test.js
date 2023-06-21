@@ -15,7 +15,6 @@ describe("validate is number of credit card or not", () => {
       headless: false,
       devtools: false,
       slowMo: 100,
-      ignoreHTTPSErrors: true,
     });
     page = await browser.newPage();
   });
