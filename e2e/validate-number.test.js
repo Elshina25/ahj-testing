@@ -15,6 +15,7 @@ describe("validate is number of credit card or not", () => {
       headless: false,
       devtools: false,
       slowMo: 100,
+      args: ['--no-sandbox'],
     });
     page = await browser.newPage();
   });
@@ -26,7 +27,6 @@ describe("validate is number of credit card or not", () => {
     const form = await page.$(".card-validator");
     const input = await form.$(".input");
     const button = await form.$(".button");
-    // const tooltip = await form.$(".tooltip");
 
     await input.type("4716715717238562");
     await button.click();
@@ -41,7 +41,6 @@ describe("validate is number of credit card or not", () => {
     const form = await page.$(".card-validator");
     const input = await form.$(".input");
     const button = await form.$(".button");
-    // const tooltip = await form.$(".tooltip");
 
     await input.type("53556555656322656232");
     await button.click();
