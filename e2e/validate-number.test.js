@@ -7,8 +7,8 @@ import puppeteer from "puppeteer";
 jest.setTimeout(10000);
 
 describe("validate is number of credit card or not", () => {
-  let browser;
-  let page;
+  let browser = null;
+  let page = null;
 
   beforeEach(async () => {
     browser = await puppeteer.launch({
