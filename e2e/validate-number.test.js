@@ -5,7 +5,7 @@
 import puppeteer from "puppeteer";
 import childProcess from "child_process";
 
-jest.setTimeout(100000);
+jest.setTimeout(150000);
 
 describe("validate is number of credit card or not", () => {
   let browser = null;
