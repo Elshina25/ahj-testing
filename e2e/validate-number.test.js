@@ -12,7 +12,7 @@ describe("validate is number of credit card or not", () => {
   let page = null;
   let server = null;
 
-  beforeEach(async () => {
+  beforeAll(async () => {
     server = fork("./e2e.server.js");
     await new Promise((resolve, reject) => {
       server.on("error", reject);
@@ -58,7 +58,8 @@ describe("validate is number of credit card or not", () => {
     await page.waitForSelector(".card-validator .tooltip.not-valid");
   });
 
-  afterEach(async () => {
+  afterAll(async () => {
     await browser.close();
+    server.kill();
   });
 });
