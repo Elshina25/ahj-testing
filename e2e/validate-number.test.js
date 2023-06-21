@@ -12,9 +12,9 @@ describe("validate is number of credit card or not", () => {
 
   beforeEach(async () => {
     browser = await puppeteer.launch({
-    //   headless: false,
-    //   devtools: false,
-    //   slowMo: 100,
+      headless: false,
+      devtools: false,
+      slowMo: 100,
     });
     page = await browser.newPage();
   });
