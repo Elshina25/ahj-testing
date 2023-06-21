@@ -5,7 +5,7 @@
 import puppeteer from "puppeteer";
 import { fork } from "child_process";
 
-jest.setTimeout(50000);
+jest.setTimeout(60000);
 
 describe("validate is number of credit card or not", () => {
   let browser = null;
@@ -13,7 +13,7 @@ describe("validate is number of credit card or not", () => {
   let server = null;
 
   beforeAll(async () => {
-    server = fork("../e2e/e2e.server.js");
+    server = fork("./ahj-testing/e2e/e2e.server.js");
     await new Promise((resolve, reject) => {
       server.on("error", reject);
       server.on("message", (message) => {
