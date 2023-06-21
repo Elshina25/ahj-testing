@@ -13,7 +13,7 @@ describe("validate is number of credit card or not", () => {
   let server = null;
 
   beforeAll(async () => {
-    server = childProcess.fork(`${__dirname}/test-server.js`);
+    server = childProcess.fork(`${__dirname}/e2e.server.js`);
     await new Promise((resolve, reject) => {
       server.on("error", () => {
         reject();
