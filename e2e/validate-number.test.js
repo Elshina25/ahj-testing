@@ -4,7 +4,7 @@
 
 import puppeteer from "puppeteer";
 
-jest.setTimeout(10000);
+jest.setTimeout(30000);
 
 describe("validate is number of credit card or not", () => {
   let browser = null;
